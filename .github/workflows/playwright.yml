@@ -24,7 +24,6 @@ jobs:
         run: |
           apt-get update
           apt-get install -y libgbm-dev
-          apt-get install chromium
           npm ci
           npx playwright install chromium
           npm install -g lighthouse chrome-launcher axe-core chromium wait-on
