@@ -8,6 +8,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    container:
+      image: ubuntu:latest
+      options: --cpus 2 --memory 4G --user root
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -15,25 +18,31 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "17.x"
+          node-version: "18.x"
 
       - name: Install dependencies
         run: |
-          sudo apt-get update
-          sudo apt-get install -y libgbm-dev         
+          apt-get update
+          apt-get install -y libgbm-dev         
           npm ci
           npx playwright install chromium
           npm install -g lighthouse chrome-launcher axe-core chromium wait-on
+          npx playwright install-deps  
+          npm run build --turbo
+
       - name: Start the application
         run: |
           export DISPLAY=:1
-          npm run start & npx wait-on http://localhost:3000
+          npm run start 2>&1 > app.log &
+          npx wait-on --timeout 30000 http://localhost:3000 || (cat app.log && exit 1)
+
       - name: Run Playwright tests
         run: npx playwright test --config=playwright.config.js
 
       - name: Generate Lighthouse Report
         run: |
-          lighthouse http://localhost:3000 --output html --output-path ./test-results/report.html --chrome-flags="--headless --no-sandbox --disable-gpu"
+          lighthouse http://localhost:3000 --output html --output-path ./reports/report.html --chrome-flags="--headless --no-sandbox --disable-gpu"
+
       - name: Upload report, screenshots and videos of failed tests
         uses: actions/upload-artifact@v3
         with:
