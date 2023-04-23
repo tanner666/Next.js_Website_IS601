@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 //npm install @headlessui/react react-scroll
 import { Transition } from "@headlessui/react";
-import { Link } from "react-scroll";
+import Link from 'next/link';
 import 'tailwindcss/tailwind.css'; 
 
 function Navbar() {
@@ -18,11 +18,12 @@ function Navbar() {
 									MyWeb<span className="text-blue-500">Class</span>
 								</h1>
 							</div>
+                            
 							<div className="hidden md:block">
 								<div className="ml-10 flex items-baseline space-x-4">
 									<Link
+                                        href="/"
 										activeClass="Home"
-										to="about"
 										smooth={true}
 										offset={50}
 										duration={500}
@@ -36,8 +37,9 @@ function Navbar() {
 										Home
 									</Link>
 									<Link
+                                        href="/about"
 										activeClass="About"
-										to="About"
+										to="/about"
 										smooth={true}
 										offset={50}
 										duration={500}
@@ -51,6 +53,7 @@ function Navbar() {
 										About
 									</Link>
 									<Link
+                                        href="/resources"
 										activeClass="Resources"
 										to="Resources"
 										smooth={true}
@@ -67,6 +70,7 @@ function Navbar() {
 									</Link>
 
 									<Link
+                                        href="/services"
 										activeClass="Services"
 										to="Services"
 										smooth={true}
@@ -83,6 +87,7 @@ function Navbar() {
 									</Link>
 
 									<Link
+                                        href="/services"
 										activeClass="Blog"
 										to="Blog"
 										smooth={true}
@@ -164,9 +169,8 @@ function Navbar() {
 								className="bg-white px-2 pt-2 pb-3 space-y-1 sm:px-3"
 							>
 								<Link
-									href="/home"
+                                    href="/"
 									activeClass="home"
-									to="home"
 									smooth={true}
 									offset={50}
 									duration={500}
@@ -180,9 +184,8 @@ function Navbar() {
 									Home
 								</Link>
 								<Link
-									href="/about"
 									activeClass="about"
-									to="about"
+									href="about"
 									smooth={true}
 									offset={50}
 									duration={500}
@@ -199,7 +202,7 @@ function Navbar() {
 								<Link
 									href="/resources"
 									activeClass="resources"
-									to="resources"
+									
 									smooth={true}
 									offset={50}
 									duration={500}
@@ -215,7 +218,6 @@ function Navbar() {
 								<Link
 									href="/services"
 									activeClass="services"
-									to="services"
 									smooth={true}
 									offset={50}
 									duration={500}
@@ -230,9 +232,8 @@ function Navbar() {
 								</Link>
 
 								<Link
-									href="/blog"
+									href="/services"
 									activeClass="blog"
-									to="blog"
 									smooth={true}
 									offset={50}
 									duration={500}
