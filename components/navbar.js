@@ -6,15 +6,16 @@ import 'tailwindcss/tailwind.css';
 
 function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
+    const [activeClass, setActiveClass] = useState("");
 	return (
 		<div>
-			<nav className=" shadow-sm fixed w-full z-10">
+			<nav className=" shadow-sm fixed top-0 w-full z-10" role="navigation" aria-label="Main">
 				<div className="w-full">
 					<div className="flex items-center h-20 w-full">
 						<div className="flex items-center  mx-20  justify-between w-full">
 							<div className="flex justify-center items-center flex-shrink-0 ">
 								<h1 className=" font-bold text-xl cursor-pointer">
-									Stream<span className="text-blue-500">line</span>
+									MyWeb<span className="text-blue-500">Class</span>
 								</h1>
 							</div>
 							<div className="hidden md:block">
@@ -26,50 +27,75 @@ function Navbar() {
 										offset={50}
 										duration={500}
 										className="cursor-pointer text-blue-600 font-semibold px-3 py-2 text-md hover:font-black"
-									>
+                                        role="menuitem"
+                                        tabIndex="0"
+                                        aria-label="Home section"
+                                        aria-current={activeClass === "Home" ? "page" : undefined}
+                                        onSetActive={() => setActiveClass("Home")}
+                                    >
 										Home
 									</Link>
 									<Link
-										activeClass="about"
-										to="about"
+										activeClass="About"
+										to="About"
 										smooth={true}
 										offset={50}
 										duration={500}
 										className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-									>
+                                        role="menuitem"
+                                        tabIndex="0"
+                                        aria-label="About section"
+                                        aria-current={activeClass === "About" ? "page" : undefined}
+                                        onSetActive={() => setActiveClass("About")}
+                                    >
 										About
 									</Link>
 									<Link
-										activeClass="work"
-										to="work"
+										activeClass="Resources"
+										to="Resources"
 										smooth={true}
 										offset={50}
 										duration={500}
 										className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-									>
-										Projects
+                                        role="menuitem"
+                                        tabIndex="0"
+                                        aria-label="Resources section"
+                                        aria-current={activeClass === "Resources" ? "page" : undefined}
+                                        onSetActive={() => setActiveClass("Resources")}
+                                    >
+										Resources
 									</Link>
 
 									<Link
 										activeClass="Services"
-										to="work"
+										to="Services"
 										smooth={true}
 										offset={50}
 										duration={500}
 										className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-									>
+                                        role="menuitem"
+                                        tabIndex="0"
+                                        aria-label="Services section"
+                                        aria-current={activeClass === "Services" ? "page" : undefined}
+                                        onSetActive={() => setActiveClass("Services")}
+                                    >
 										Services
 									</Link>
 
 									<Link
-										activeClass="contact"
-										to="contact"
+										activeClass="Blog"
+										to="Blog"
 										smooth={true}
 										offset={50}
 										duration={500}
 										className="cursor-pointer bg-blue-600 text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-black"
-									>
-										Contact
+                                        role="menuitem"
+                                        tabIndex="0"
+                                        aria-label="Blog section"
+                                        aria-current={activeClass === "Blog" ? "page" : undefined}
+                                        onSetActive={() => setActiveClass("Blog")}
+                                    >
+										Blog
 									</Link>
 								</div>
 							</div>
@@ -80,9 +106,10 @@ function Navbar() {
 								type="button"
 								className="bg-blue-600 inline-flex items-center justify-center p-2 rounded-md text-white  hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-800 focus:ring-white"
 								aria-controls="mobile-menu"
-								aria-expanded="false"
+								aria-expanded={isOpen}
+                                aria-labelledby="menuButtonLabel"
 							>
-								<span className="sr-only">Open main menu</span>
+								<span id="menuButtonLabel" className="sr-only">Open main menu</span>
 								{!isOpen ? (
 									<svg
 										className="block h-6 w-6"
@@ -131,7 +158,7 @@ function Navbar() {
 					leaveTo="opacity-0 scale-95"
 				>
 					{(ref) => (
-						<div className="md:hidden" id="mobile-menu">
+						<div className="md:hidden" id="mobile-menu" role="menu">
 							<div
 								ref={ref}
 								className="bg-white px-2 pt-2 pb-3 space-y-1 sm:px-3"
@@ -144,6 +171,11 @@ function Navbar() {
 									offset={50}
 									duration={500}
 									className="cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                                    role="menuitem"
+                                    tabIndex="0"
+                                    aria-label="Home section"
+                                    aria-current={activeClass === "home" ? "page" : undefined}
+                                    onSetActive={() => setActiveClass("home")}
 								>
 									Home
 								</Link>
@@ -155,20 +187,30 @@ function Navbar() {
 									offset={50}
 									duration={500}
 									className="cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-								>
+                                    role="menuitem"
+                                    tabIndex="0"
+                                    aria-label="About section"
+                                    aria-current={activeClass === "about" ? "page" : undefined}
+                                    onSetActive={() => setActiveClass("about")}
+                                >
 									About
 								</Link>
 
 								<Link
-									href="/work"
-									activeClass="work"
-									to="work"
+									href="/resources"
+									activeClass="resources"
+									to="resources"
 									smooth={true}
 									offset={50}
 									duration={500}
 									className="cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-								>
-									Projects
+                                    role="menuitem"
+                                    tabIndex="0"
+                                    aria-label="Resources section"
+                                    aria-current={activeClass === "resources" ? "page" : undefined}
+                                    onSetActive={() => setActiveClass("resources")}
+                                >
+									Resources
 								</Link>
 								<Link
 									href="/services"
@@ -178,20 +220,30 @@ function Navbar() {
 									offset={50}
 									duration={500}
 									className="cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-								>
+                                    role="menuitem"
+                                    tabIndex="0"
+                                    aria-label="Services section"
+                                    aria-current={activeClass === "services" ? "page" : undefined}
+                                    onSetActive={() => setActiveClass("services")}
+                                >
 									Services
 								</Link>
 
 								<Link
-									href="/contact"
-									activeClass="work"
-									to="work"
+									href="/blog"
+									activeClass="blog"
+									to="blog"
 									smooth={true}
 									offset={50}
 									duration={500}
 									className="cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-								>
-									Contact
+                                    role="menuitem"
+                                    tabIndex="0"
+                                    aria-label="Blog section"
+                                    aria-current={activeClass === "blog" ? "page" : undefined}
+                                    onSetActive={() => setActiveClass("blog")}
+                                >
+									Blog
 								</Link>
 							</div>
 						</div>
