@@ -7,6 +7,7 @@ import 'tailwindcss/tailwind.css';
 function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
     const [activeClass, setActiveClass] = useState("");
+    //const [activeDropdown, setActiveDropdown] = useState("");
 	return (
 		<div>
 			<nav className=" shadow-sm fixed top-0 w-full z-10" role="navigation" aria-label="Main">
@@ -15,7 +16,7 @@ function Navbar() {
 						<div className="flex items-center  mx-20  justify-between w-full">
 							<div className="flex justify-center items-center flex-shrink-0 ">
 								<h1 className=" font-bold text-xl cursor-pointer">
-									MyWeb<span className="text-blue-500">Class</span>
+									<Link href="/">MyWeb<span className="text-blue-500">Class</span></Link>
 								</h1>
 							</div>
                             
@@ -27,7 +28,7 @@ function Navbar() {
 										smooth={true}
 										offset={50}
 										duration={500}
-										className="cursor-pointer text-blue-600 font-semibold px-3 py-2 text-md hover:font-black"
+										className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                                         role="menuitem"
                                         tabIndex="0"
                                         aria-label="Home section"
@@ -36,22 +37,49 @@ function Navbar() {
                                     >
 										Home
 									</Link>
-									<Link
-                                        href="/about"
-										activeClass="About"
-										to="/about"
-										smooth={true}
-										offset={50}
-										duration={500}
-										className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                                        role="menuitem"
-                                        tabIndex="0"
-                                        aria-label="About section"
-                                        aria-current={activeClass === "About" ? "page" : undefined}
-                                        onSetActive={() => setActiveClass("About")}
+									<div
+                                        className="relative inline-block text-left"
+                                        onMouseEnter={() => setActiveClass("About")}
+                                        onMouseLeave={() => setActiveClass("")}
                                     >
-										About
-									</Link>
+                                        <button 
+                                            className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                                            activeClass="About"
+                                            role="menuitem"
+                                            tabIndex="0"
+                                            aria-label="Blog section"
+                                            aria-current={activeClass === "Blog" ? "page" : undefined}
+                                            onSetActive={() => setActiveClass("Services")}
+                                        >
+                                        <Link href="/about">About</Link>
+                                        </button>
+                                        <Transition
+                                        show={activeClass === "About"}
+                                        enter="transition-opacity ease-out duration-100"
+                                        enterFrom="opacity-0"
+                                        enterTo="opacity-100"
+                                        leave="transition-opacity ease-in duration-75"
+                                        leaveFrom="opacity-100"
+                                        leaveTo="opacity-0"
+                                        >
+                                        <div className="absolute left-0 mt-2 w-56 origin-top-left bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg focus:outline-none">
+                                            <div className="py-1">
+                                            <Link
+                                                href="/about/our-mission"
+                                                className="block px-4 py-2 text-sm text-black hover:bg-blue-600 hover:text-white"
+                                            >
+                                                Our Mission
+                                            </Link>
+                                            <Link
+                                                href="/about/our-team"
+                                                className="block px-4 py-2 text-sm text-black hover:bg-blue-600 hover:text-white"
+                                            >
+                                                Our Team
+                                            </Link>
+                                            </div>
+                                        </div>
+                                        </Transition>
+                                    </div>
 									<Link
                                         href="/resources"
 										activeClass="Resources"
@@ -86,22 +114,49 @@ function Navbar() {
 										Services
 									</Link>
 
-									<Link
-                                        href="/services"
-										activeClass="Blog"
-										to="Blog"
-										smooth={true}
-										offset={50}
-										duration={500}
-										className="cursor-pointer bg-blue-600 text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-black"
-                                        role="menuitem"
-                                        tabIndex="0"
-                                        aria-label="Blog section"
-                                        aria-current={activeClass === "Blog" ? "page" : undefined}
-                                        onSetActive={() => setActiveClass("Blog")}
+									<div
+                                        className="relative inline-block text-left"
+                                        onMouseEnter={() => setActiveClass("Blog")}
+                                        onMouseLeave={() => setActiveClass("")}
                                     >
-										Blog
-									</Link>
+                                        <button 
+                                            activeClass="Blog"
+                                            className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                                            role="menuitem"
+                                            tabIndex="0"
+                                            aria-label="Blog section"
+                                            aria-current={activeClass === "Blog" ? "page" : undefined}
+                                            onSetActive={() => setActiveClass("Services")}
+                                        >
+                                        Blog
+                                        </button>
+                                        <Transition
+                                        show={activeClass === "Blog"}
+                                        enter="transition-opacity ease-out duration-100"
+                                        enterFrom="opacity-0"
+                                        enterTo="opacity-100"
+                                        leave="transition-opacity ease-in duration-75"
+                                        leaveFrom="opacity-100"
+                                        leaveTo="opacity-0"
+                                        >
+                                        <div className="absolute left-0 mt-2 w-56 origin-top-left bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg focus:outline-none">
+                                            <div className="py-1">
+                                            <Link
+                                                href="/posts/pre-rendering"
+                                                className="block px-4 py-2 text-sm text-black hover:bg-blue-600 hover:text-white"
+                                            >
+                                                Pre-Rendering
+                                            </Link>
+                                            <Link
+                                                href="/posts/ssg-ssr"
+                                                className="block px-4 py-2 text-sm text-black hover:bg-blue-600 hover:text-white"
+                                            >
+                                                SSG-SSR
+                                            </Link>
+                                            </div>
+                                        </div>
+                                        </Transition>
+                                    </div>
 								</div>
 							</div>
 						</div>
