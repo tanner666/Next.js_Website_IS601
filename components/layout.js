@@ -6,6 +6,7 @@ import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 import Navbar from '../components/navbar'
+import PopUp from './pop-up'
 
 const name = '[Your Name]'
 export const siteTitle = 'MyWebClass.org'
@@ -35,7 +36,9 @@ export default function Layout({ children, home }) {
           console.log(`script loaded correctly, window.FB has been populated`)
         }
       />
-      <Navbar/>
+      <div>
+        <PopUp title="Privacy Policy"/>
+      </div>
       <header className={styles.header}>
         {home ? (
           <>
