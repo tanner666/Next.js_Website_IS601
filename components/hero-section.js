@@ -1,3 +1,4 @@
+//this is used to customize page elements (like navbar) to match hero theme/ brand archetype
 import React from "react";
 
 function HeroSection() {

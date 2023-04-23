@@ -3,7 +3,8 @@ const { mauve, violet, red, blackA } = require('@radix-ui/colors');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./components/pop-up.jsx'],
+  content: ['./components/pop-up.jsx', './components/navbar.js'],
+  darkMode: false,
   theme: {
     extend: {
       colors: {
@@ -28,5 +29,9 @@ module.exports = {
       },
     },
   },
+  variants: {
+    extend: {},
+  },
   plugins: [],
 };
+
