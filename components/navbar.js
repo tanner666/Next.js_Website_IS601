@@ -2,12 +2,14 @@ import React, { useState } from "react";
 //npm install @headlessui/react react-scroll
 import { Transition } from "@headlessui/react";
 import Link from 'next/link';
+import { CaretDownIcon } from '@radix-ui/react-icons';
 import 'tailwindcss/tailwind.css'; 
 
 function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
     const [activeClass, setActiveClass] = useState("");
-    //const [activeDropdown, setActiveDropdown] = useState("");
+    const [activeMobileSubmenu, setActiveMobileSubmenu] = useState("");
+    const disabledLink = "opacity-50 cursor-not-allowed";
 	return (
 		<div>
 			<nav className=" shadow-sm fixed top-0 w-full z-10" role="navigation" aria-label="Main">
@@ -47,11 +49,11 @@ function Navbar() {
                                             activeClass="About"
                                             role="menuitem"
                                             tabIndex="0"
-                                            aria-label="Blog section"
-                                            aria-current={activeClass === "Blog" ? "page" : undefined}
-                                            onSetActive={() => setActiveClass("Services")}
+                                            aria-label="About section"
+                                            aria-current={activeClass === "About" ? "page" : undefined}
+                                            onSetActive={() => setActiveClass("About")}
                                         >
-                                        <Link href="/about">About</Link>
+                                        About
                                         </button>
                                         <Transition
                                         show={activeClass === "About"}
@@ -126,7 +128,7 @@ function Navbar() {
                                             tabIndex="0"
                                             aria-label="Blog section"
                                             aria-current={activeClass === "Blog" ? "page" : undefined}
-                                            onSetActive={() => setActiveClass("Services")}
+                                            onSetActive={() => setActiveClass("Blog")}
                                         >
                                         Blog
                                         </button>
@@ -238,21 +240,70 @@ function Navbar() {
 								>
 									Home
 								</Link>
-								<Link
-									activeClass="about"
-									href="about"
-									smooth={true}
-									offset={50}
-									duration={500}
-									className="cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                                    role="menuitem"
-                                    tabIndex="0"
-                                    aria-label="About section"
-                                    aria-current={activeClass === "about" ? "page" : undefined}
-                                    onSetActive={() => setActiveClass("about")}
-                                >
-									About
-								</Link>
+                                <div
+                                        className="relative inline-block text-left"
+                                        onClick={() => {
+                                            if (activeClass === "about") {
+                                            
+                                            setActiveClass("");
+                                            } else {
+                                            setActiveClass("about");
+                                            }
+                                        }}
+                                    >
+                                        <button 
+                                            activeClass="about"
+                                            className="cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                                            role="menuitem"
+                                            tabIndex="0"
+                                            aria-label="About section"
+                                            aria-current={activeClass === "about" ? "page" : undefined}
+                                            onSetActive={() => setActiveClass("about")}
+                                        >
+                                        About
+                                        </button>
+                                        <Transition
+                                            show={activeClass === "about"}
+                                            enter="transition-opacity ease-out duration-100"
+                                            enterFrom="opacity-0"
+                                            enterTo="opacity-100"
+                                            leave="transition-opacity ease-in duration-75"
+                                            leaveFrom="opacity-100"
+                                            leaveTo="opacity-0"
+                                            >
+                                            
+                                                <Link
+                                                    href="/about/our-mission"
+                                                    smooth={true}
+                                                    offset={50}
+                                                    duration={500}
+                                                    className="cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                                                    role="menuitem"
+                                                    tabIndex="0"
+                                                    aria-label="About section"
+                                                    aria-current={activeClass === "about" ? "page" : undefined}
+                                                    onSetActive={() => setActiveClass("about")}
+                                                >
+                                                    Our Mission
+                                                </Link>
+                                                <Link
+                                                    href="/about/our-team"
+                                                    smooth={true}
+                                                    offset={50}
+                                                    duration={500}
+                                                    className="cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                                                    role="menuitem"
+                                                    tabIndex="0"
+                                                    aria-label="About section"
+                                                    aria-current={activeClass === "about" ? "page" : undefined}
+                                                    onSetActive={() => setActiveClass("about")}
+                                                >
+                                                    Our Team
+                                                </Link>
+                                               
+                                        </Transition>
+                                    </div>
+								
 
 								<Link
 									href="/resources"
@@ -286,21 +337,69 @@ function Navbar() {
 									Services
 								</Link>
 
-								<Link
-									href="/services"
-									activeClass="blog"
-									smooth={true}
-									offset={50}
-									duration={500}
-									className="cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                                    role="menuitem"
-                                    tabIndex="0"
-                                    aria-label="Blog section"
-                                    aria-current={activeClass === "blog" ? "page" : undefined}
-                                    onSetActive={() => setActiveClass("blog")}
-                                >
-									Blog
-								</Link>
+								<div
+                                        className="relative inline-block text-left"
+                                        onClick={() => {
+                                            if (activeClass === "blog") {
+                                            
+                                            setActiveClass("");
+                                            } else {
+                                            setActiveClass("blog");
+                                            }
+                                        }}
+                                    >
+                                        <button 
+                                            activeClass="blog"
+                                            className="cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                                            role="menuitem"
+                                            tabIndex="0"
+                                            aria-label="Blog section"
+                                            aria-current={activeClass === "blog" ? "page" : undefined}
+                                            onSetActive={() => setActiveClass("blog")}
+                                        >
+                                        Blog
+                                        </button>
+                                        <Transition
+                                            show={activeClass === "blog"}
+                                            enter="transition-opacity ease-out duration-100"
+                                            enterFrom="opacity-0"
+                                            enterTo="opacity-100"
+                                            leave="transition-opacity ease-in duration-75"
+                                            leaveFrom="opacity-100"
+                                            leaveTo="opacity-0"
+                                            >
+                                            
+                                                <Link
+                                                    href="/blog/pre-rendering"
+                                                    smooth={true}
+                                                    offset={50}
+                                                    duration={500}
+                                                    className="cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                                                    role="menuitem"
+                                                    tabIndex="0"
+                                                    aria-label="Blog section"
+                                                    aria-current={activeClass === "blog" ? "page" : undefined}
+                                                    onSetActive={() => setActiveClass("blog")}
+                                                >
+                                                    Pre-Rendering
+                                                </Link>
+                                                <Link
+                                                    href="/blog/ssg-ssr"
+                                                    smooth={true}
+                                                    offset={50}
+                                                    duration={500}
+                                                    className="cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                                                    role="menuitem"
+                                                    tabIndex="0"
+                                                    aria-label="Blog section"
+                                                    aria-current={activeClass === "blog" ? "page" : undefined}
+                                                    onSetActive={() => setActiveClass("blog")}
+                                                >
+                                                    Static Site Generation
+                                                </Link>
+                                               
+                                        </Transition>
+                                    </div>
 							</div>
 						</div>
 					)}
