@@ -159,6 +159,21 @@ function Navbar() {
                                         </div>
                                         </Transition>
                                     </div>
+                                    <Link
+                                        href="/privacy-policy"
+										activeClass="Privacy"
+										smooth={true}
+										offset={50}
+										duration={500}
+										className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                                        role="menuitem"
+                                        tabIndex="0"
+                                        aria-label="Privacy Policy section"
+                                        aria-current={activeClass === "Privacy" ? "page" : undefined}
+                                        onSetActive={() => setActiveClass("Privacy")}
+                                    >
+										Privacy Policy
+									</Link>
 								</div>
 							</div>
 						</div>
@@ -400,6 +415,21 @@ function Navbar() {
                                                
                                         </Transition>
                                     </div>
+                                    <Link
+                                        href="/privacy-policy"
+										activeClass="Privacy"
+										smooth={true}
+										offset={50}
+										duration={500}
+                                        className="cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                                        role="menuitem"
+                                        tabIndex="0"
+                                        aria-label="Privacy Policy section"
+                                        aria-current={activeClass === "Privacy" ? "page" : undefined}
+                                        onSetActive={() => setActiveClass("Privacy")}
+                                    >
+										Privacy Policy
+									</Link>
 							</div>
 						</div>
 					)}
