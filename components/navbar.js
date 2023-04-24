@@ -370,7 +370,7 @@ function Navbar() {
                                             >
                                             
                                                 <Link
-                                                    href="/blog/pre-rendering"
+                                                    href="/posts/pre-rendering"
                                                     smooth={true}
                                                     offset={50}
                                                     duration={500}
@@ -384,7 +384,7 @@ function Navbar() {
                                                     Pre-Rendering
                                                 </Link>
                                                 <Link
-                                                    href="/blog/ssg-ssr"
+                                                    href="/posts/ssg-ssr"
                                                     smooth={true}
                                                     offset={50}
                                                     duration={500}
