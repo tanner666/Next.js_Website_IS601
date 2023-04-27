@@ -1,6 +1,6 @@
 export default function Footer() {
     return (
-      <footer className="pb-4 text-gray-200">
+      <footer className="pb-4 text-black">
         <div className="max-w-5xl xl:max-w-5xl mx-auto divide-y divide-gray-900 px-4 sm:px-6 md:px-8">
           <ul className="text-sm font-medium sm:pb-20 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-10">
             <li className="space-y-5 row-span-2">
@@ -11,7 +11,7 @@ export default function Footer() {
                     className="hover:text-white transition-colors duration-200 text-xl"
                     href="/"
                   >
-                    Jobs
+                    Our Mission
                   </a>
                 </li>
                 <li>
@@ -19,7 +19,7 @@ export default function Footer() {
                     className="hover:text-white transition-colors duration-200 text-xl"
                     href="/"
                   >
-                    Merch
+                    Our Team
                   </a>
                 </li>{" "}
                 <li>
@@ -27,7 +27,7 @@ export default function Footer() {
                     className="hover:text-white transition-colors duration-200 text-xl"
                     href="/"
                   >
-                    Brand
+                    Resources
                   </a>
                 </li>{" "}
                 <li>
@@ -35,73 +35,7 @@ export default function Footer() {
                     className="hover:text-white transition-colors duration-200 text-xl"
                     href="/"
                   >
-                    Meetups
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li className="space-y-5 row-span-2">
-              <h2 className="text-2xl tracking-wide text-white">Newsroom</h2>
-              <ul className="space-y-4">
-                <li>
-                  <a
-                    className="hover:text-white transition-colors duration-200 text-xl"
-                    href="/"
-                  >
-                    News
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="hover:text-white transition-colors duration-200 text-xl"
-                    href="/"
-                  >
-                    Press
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="hover:text-white transition-colors duration-200 text-xl"
-                    href="/"
-                  >
-                    Blog
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li className="space-y-5 row-span-2">
-              <h2 className="text-2xl tracking-wide text-white">Products</h2>
-              <ul className="space-y-4">
-                <li>
-                  <a
-                    className="hover:text-white transition-colors duration-200 text-xl"
-                    href="/"
-                  >
-                    Hosting
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="hover:text-white transition-colors duration-200 text-xl"
-                    href="/"
-                  >
-                    Domains
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="hover:text-white transition-colors duration-200 text-xl"
-                    href="/"
-                  >
-                    Security
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="hover:text-white transition-colors duration-200 text-xl"
-                    href="/"
-                  >
-                    SSL
+                    Services
                   </a>
                 </li>
               </ul>
