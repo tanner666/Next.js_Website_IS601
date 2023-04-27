@@ -6,16 +6,28 @@ import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 import Navbar from '../components/navbar'
-import PopUp from './pop-up'
+//import PopUp from './pop-up'
+import { useState } from 'react';
+//import Header from "../components/Header";
+import Main from "../components/Main";
+import Footer from "../components/Footer";
+import 'tailwindcss/tailwind.css'; 
+import PrivacyPolicyPopup from './privacy-pop-up'
 
 const name = '[Your Name]'
 export const siteTitle = 'MyWebClass.org'
 
 export default function Layout({ children, home }) {
+  const [isOpen, setIsOpen] = useState(true);
+  const [showOverlay, setShowOverlay] = useState(true);
+
+  const handleClose = () => {
+    setIsOpen(false);
+    setShowOverlay(false);
+  };
   return (
     <>
       <Navbar/>
-      <div className={styles.container}>
         <Head>
           <link rel="icon" href="/favicon.ico" />
           <meta
@@ -31,6 +43,7 @@ export default function Layout({ children, home }) {
           <meta name="og:title" content={siteTitle} />
           <meta name="twitter:card" content="summary_large_image" />
         </Head>
+
         <Script
           src="https://connect.facebook.net/en_US/sdk.js"
           strategy="lazyOnload"
@@ -39,7 +52,7 @@ export default function Layout({ children, home }) {
           }
         />
         
-        <header className={styles.header}>
+        <header>
           {home ? (
             <>
               <Image
@@ -78,7 +91,7 @@ export default function Layout({ children, home }) {
             <Link href="/">← Back to home</Link>
           </div>
         )}
-      </div>
+      <Footer></Footer>
     </>
   )
 }

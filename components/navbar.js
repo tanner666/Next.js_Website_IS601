@@ -2,18 +2,15 @@ import React, { useState } from "react";
 //npm install @headlessui/react react-scroll
 import { Transition } from "@headlessui/react";
 import Link from 'next/link';
-import { CaretDownIcon } from '@radix-ui/react-icons';
 import 'tailwindcss/tailwind.css'; 
 
 function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
     const [activeClass, setActiveClass] = useState("");
-    const [activeMobileSubmenu, setActiveMobileSubmenu] = useState("");
-    const disabledLink = "opacity-50 cursor-not-allowed";
 	return (
 		<div>
 			<nav className=" shadow-sm fixed top-0 w-full z-10" role="navigation" aria-label="Main">
-				<div className="w-full">
+				<div className="navbar w-full">
 					<div className="flex items-center h-20 w-full">
 						<div className="flex items-center  mx-20  justify-between w-full">
 							<div className="flex justify-center items-center flex-shrink-0 ">
@@ -172,7 +169,7 @@ function Navbar() {
                                         aria-current={activeClass === "Privacy" ? "page" : undefined}
                                         onSetActive={() => setActiveClass("Privacy")}
                                     >
-										Privacy Policy
+										Privacy
 									</Link>
 								</div>
 							</div>
