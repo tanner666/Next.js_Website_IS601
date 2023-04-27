@@ -31,7 +31,7 @@ export default function Home({ allPostsData }) {
           <img
             className="object-cover object-center w-3/4 mb-10 border shadow-md g327"
             alt="Placeholder Image"
-            src="./images/placeholder.png"
+            src="./images/webclass.png"
           />
         </div>
       </section>
