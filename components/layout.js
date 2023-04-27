@@ -12,8 +12,6 @@ import { useState } from 'react';
 import Main from "../components/Main";
 import Footer from "../components/Footer";
 import 'tailwindcss/tailwind.css'; 
-import PrivacyPolicyPopup from './privacy-pop-up'
-
 const name = '[Your Name]'
 export const siteTitle = 'MyWebClass.org'
 
@@ -91,6 +89,7 @@ export default function Layout({ children, home }) {
             <Link href="/">← Back to home</Link>
           </div>
         )}
+      <Main/>
       <Footer></Footer>
     </>
   )
