@@ -1,7 +1,7 @@
 export default function Main() {
     return (
       <section class="text-gray-600 body-font">
-        <section class="relative pb-24">
+        <section class="relative pb-24">  
           <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
             <div class="py-24 md:py-36">
               <h1 class="mb-5 text-5xl font-bold text-white">

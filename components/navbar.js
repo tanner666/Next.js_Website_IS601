@@ -27,7 +27,7 @@ function Navbar() {
 										smooth={true}
 										offset={50}
 										duration={500}
-										className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+										className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-lg font-medium"
                                         role="menuitem"
                                         tabIndex="0"
                                         aria-label="Home section"
@@ -42,7 +42,7 @@ function Navbar() {
                                         onMouseLeave={() => setActiveClass("")}
                                     >
                                         <button 
-                                            className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                                            className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-lg font-medium"
                                             activeClass="About"
                                             role="menuitem"
                                             tabIndex="0"
@@ -65,13 +65,13 @@ function Navbar() {
                                             <div className="py-1">
                                             <Link
                                                 href="/about/our-mission"
-                                                className="block px-4 py-2 text-sm text-black hover:bg-blue-600 hover:text-white"
+                                                className="block px-4 py-2 text-lg text-black hover:bg-blue-600 hover:text-white"
                                             >
                                                 Our Mission
                                             </Link>
                                             <Link
                                                 href="/about/our-team"
-                                                className="block px-4 py-2 text-sm text-black hover:bg-blue-600 hover:text-white"
+                                                className="block px-4 py-2 text-lg text-black hover:bg-blue-600 hover:text-white"
                                             >
                                                 Our Team
                                             </Link>
@@ -86,7 +86,7 @@ function Navbar() {
 										smooth={true}
 										offset={50}
 										duration={500}
-										className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+										className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-lg font-medium"
                                         role="menuitem"
                                         tabIndex="0"
                                         aria-label="Resources section"
@@ -103,7 +103,7 @@ function Navbar() {
 										smooth={true}
 										offset={50}
 										duration={500}
-										className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+										className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-lg font-medium"
                                         role="menuitem"
                                         tabIndex="0"
                                         aria-label="Services section"
@@ -120,7 +120,7 @@ function Navbar() {
                                     >
                                         <button 
                                             activeClass="Blog"
-                                            className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                                            className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-lg font-medium"
                                             role="menuitem"
                                             tabIndex="0"
                                             aria-label="Blog section"
@@ -156,21 +156,6 @@ function Navbar() {
                                         </div>
                                         </Transition>
                                     </div>
-                                    <Link
-                                        href="/privacy-policy"
-										activeClass="Privacy"
-										smooth={true}
-										offset={50}
-										duration={500}
-										className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                                        role="menuitem"
-                                        tabIndex="0"
-                                        aria-label="Privacy Policy section"
-                                        aria-current={activeClass === "Privacy" ? "page" : undefined}
-                                        onSetActive={() => setActiveClass("Privacy")}
-                                    >
-										Privacy
-									</Link>
 								</div>
 							</div>
 						</div>
