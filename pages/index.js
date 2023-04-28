@@ -11,12 +11,12 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className="text-gray-600 body-font">
+      <section className="body-font">
         <div className="max-w-6xl pt-12 pb-24 mx-auto text-center">
-          <h1 className="text-80 font-4 lh-6 ld-04 font-bold text-white mb-6">
+          <h1 className="text-80 lh-6 ld-04 font-bold title mb-6">
             Welcome to MyWebClass
           </h1>
-          <h2 className="text-2xl font-4 font-semibold lh-6 ld-04 pb-11 text-gray-700">
+          <h2 className="text-2xl font-semibold lh-6 ld-04 pb-11 subtext">
             nine4 is a free to use template website for websites made
             <br />
             with Next.js and styled with Tailwind CSS

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-//npm install @headlessui/react react-scroll
 import { Transition } from "@headlessui/react";
 import Link from 'next/link';
 import 'tailwindcss/tailwind.css'; 
+import styles from './navbar.module.css';
 
 function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +15,7 @@ function Navbar() {
 						<div className="flex items-center  mx-20  justify-between w-full">
 							<div className="flex justify-center items-center flex-shrink-0 ">
 								<h1 className=" font-bold text-2xl cursor-pointer">
-									<Link href="/">MyWeb<span className="text-blue-500">Class</span></Link>
+									<Link href="/">MyWeb<span className="text-blue-600">Class</span></Link>
 								</h1>
 							</div>
                             
@@ -27,7 +27,7 @@ function Navbar() {
 										smooth={true}
 										offset={50}
 										duration={500}
-										className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-lg font-medium"
+										className={styles.button}
                                         role="menuitem"
                                         tabIndex="0"
                                         aria-label="Home section"
@@ -42,7 +42,7 @@ function Navbar() {
                                         onMouseLeave={() => setActiveClass("")}
                                     >
                                         <button 
-                                            className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-lg font-medium"
+                                            className={styles.button}
                                             activeClass="About"
                                             role="menuitem"
                                             tabIndex="0"
@@ -65,13 +65,13 @@ function Navbar() {
                                             <div className="py-1">
                                             <Link
                                                 href="/about/our-mission"
-                                                className="block px-4 py-2 text-base text-black hover:bg-blue-600 hover:text-white"
+                                                className={styles.submenu}
                                             >
                                                 Our Mission
                                             </Link>
                                             <Link
                                                 href="/about/our-team"
-                                                className="block px-4 py-2 text-base text-black hover:bg-blue-600 hover:text-white"
+                                                className={styles.submenu}
                                             >
                                                 Our Team
                                             </Link>
@@ -86,7 +86,7 @@ function Navbar() {
 										smooth={true}
 										offset={50}
 										duration={500}
-										className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-lg font-medium"
+										className={styles.button}
                                         role="menuitem"
                                         tabIndex="0"
                                         aria-label="Resources section"
@@ -103,7 +103,7 @@ function Navbar() {
 										smooth={true}
 										offset={50}
 										duration={500}
-										className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-lg font-medium"
+										className={styles.button}
                                         role="menuitem"
                                         tabIndex="0"
                                         aria-label="Services section"
@@ -120,7 +120,7 @@ function Navbar() {
                                     >
                                         <button 
                                             activeClass="Blog"
-                                            className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-lg font-medium"
+                                            className={styles.button}
                                             role="menuitem"
                                             tabIndex="0"
                                             aria-label="Blog section"
@@ -142,13 +142,13 @@ function Navbar() {
                                             <div className="py-1">
                                             <Link
                                                 href="/posts/pre-rendering"
-                                                className="block px-4 py-2 text-base text-black hover:bg-blue-600 hover:text-white"
+                                                className={styles.submenu}
                                             >
                                                 Pre-Rendering
                                             </Link>
                                             <Link
                                                 href="/posts/ssg-ssr"
-                                                className="block px-4 py-2 text-base text-black hover:bg-blue-600 hover:text-white"
+                                                className={styles.submenu}
                                             >
                                                 SSG-SSR
                                             </Link>

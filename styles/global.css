@@ -10,7 +10,15 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color: lightgrey;
+  background-color:#1a1e37;
+}
+
+body .title{
+  color: white;
+}
+
+body .subtext{
+  color: #7e8083;
 }
 
 
@@ -23,6 +31,10 @@ body {
   font-size: 18px;
   background-color: white;
   color: black;
+}
+
+.title {
+  
 }
 
 a {

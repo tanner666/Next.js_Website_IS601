@@ -1,22 +1,22 @@
 import Head from 'next/head'
 import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
-import { getSortedPostsData } from '../lib/about'
+import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
 import Date from '../components/date'
 
 export default function Home({ allPostsData }) {
   return (
-    <Layout home>
+    <Layout>
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className="text-gray-600 body-font">
-        <div className="max-w-5xl pt-36 pb-24 mx-auto text-center">
-          <h1 className="text-80 font-4 lh-6 ld-04 font-bold text-white mb-6">
+      <section className="body-font">
+        <div className="max-w-6xl pt-12 pb-24 mx-auto text-center">
+          <h1 className="text-80 lh-6 ld-04 font-bold title mb-6">
             Welcome to MyWebClass
           </h1>
-          <h2 className="text-2xl font-4 font-semibold lh-6 ld-04 pb-11 text-gray-700">
+          <h2 className="text-2xl font-semibold lh-6 ld-04 pb-11 subtext">
             nine4 is a free to use template website for websites made
             <br />
             with Next.js and styled with Tailwind CSS
@@ -31,10 +31,11 @@ export default function Home({ allPostsData }) {
           <img
             className="object-cover object-center w-3/4 mb-10 border shadow-md g327"
             alt="Placeholder Image"
-            src="./images/placeholder.png"
+            src="./images/webclass.png"
           />
         </div>
       </section>
+
     </Layout>
   )
 }

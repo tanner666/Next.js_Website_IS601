@@ -7,7 +7,7 @@ export default function Main() {
               <h1 class="mb-5 text-5xl font-bold text-white">
                 Subscribe to our newsletter
               </h1>
-              <h1 class="mb-9 text-2xl font-semibold text-gray-200">
+              <h1 class="subtext mb-9 text-2xl font-semibold">
                 Enter your email address and get our newsletters straight away.
               </h1>
               <input
