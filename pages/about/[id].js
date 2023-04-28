@@ -7,6 +7,7 @@ import utilStyles from '../../styles/utils.module.css'
 export default function Post({ postData }) {
   return (
     <Layout>
+      <div className="flex justify-center">
       <Head>
         <title>{postData.title}</title>
       </Head>
@@ -15,8 +16,9 @@ export default function Post({ postData }) {
         <div className={utilStyles.lightText}>
           <Date dateString={postData.date} />
         </div>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <div className="max-w-xl" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
+      </div>
     </Layout>
   )
 }

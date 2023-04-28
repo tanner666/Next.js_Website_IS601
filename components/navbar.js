@@ -2,22 +2,19 @@ import React, { useState } from "react";
 //npm install @headlessui/react react-scroll
 import { Transition } from "@headlessui/react";
 import Link from 'next/link';
-import { CaretDownIcon } from '@radix-ui/react-icons';
 import 'tailwindcss/tailwind.css'; 
 
 function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
     const [activeClass, setActiveClass] = useState("");
-    const [activeMobileSubmenu, setActiveMobileSubmenu] = useState("");
-    const disabledLink = "opacity-50 cursor-not-allowed";
 	return (
 		<div>
 			<nav className=" shadow-sm fixed top-0 w-full z-10" role="navigation" aria-label="Main">
-				<div className="w-full">
+				<div className="navbar w-full">
 					<div className="flex items-center h-20 w-full">
 						<div className="flex items-center  mx-20  justify-between w-full">
 							<div className="flex justify-center items-center flex-shrink-0 ">
-								<h1 className=" font-bold text-xl cursor-pointer">
+								<h1 className=" font-bold text-2xl cursor-pointer">
 									<Link href="/">MyWeb<span className="text-blue-500">Class</span></Link>
 								</h1>
 							</div>
@@ -30,7 +27,7 @@ function Navbar() {
 										smooth={true}
 										offset={50}
 										duration={500}
-										className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+										className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-lg font-medium"
                                         role="menuitem"
                                         tabIndex="0"
                                         aria-label="Home section"
@@ -45,7 +42,7 @@ function Navbar() {
                                         onMouseLeave={() => setActiveClass("")}
                                     >
                                         <button 
-                                            className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                                            className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-lg font-medium"
                                             activeClass="About"
                                             role="menuitem"
                                             tabIndex="0"
@@ -68,13 +65,13 @@ function Navbar() {
                                             <div className="py-1">
                                             <Link
                                                 href="/about/our-mission"
-                                                className="block px-4 py-2 text-sm text-black hover:bg-blue-600 hover:text-white"
+                                                className="block px-4 py-2 text-base text-black hover:bg-blue-600 hover:text-white"
                                             >
                                                 Our Mission
                                             </Link>
                                             <Link
                                                 href="/about/our-team"
-                                                className="block px-4 py-2 text-sm text-black hover:bg-blue-600 hover:text-white"
+                                                className="block px-4 py-2 text-base text-black hover:bg-blue-600 hover:text-white"
                                             >
                                                 Our Team
                                             </Link>
@@ -89,7 +86,7 @@ function Navbar() {
 										smooth={true}
 										offset={50}
 										duration={500}
-										className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+										className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-lg font-medium"
                                         role="menuitem"
                                         tabIndex="0"
                                         aria-label="Resources section"
@@ -106,7 +103,7 @@ function Navbar() {
 										smooth={true}
 										offset={50}
 										duration={500}
-										className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+										className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-lg font-medium"
                                         role="menuitem"
                                         tabIndex="0"
                                         aria-label="Services section"
@@ -123,7 +120,7 @@ function Navbar() {
                                     >
                                         <button 
                                             activeClass="Blog"
-                                            className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                                            className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-lg font-medium"
                                             role="menuitem"
                                             tabIndex="0"
                                             aria-label="Blog section"
@@ -145,13 +142,13 @@ function Navbar() {
                                             <div className="py-1">
                                             <Link
                                                 href="/posts/pre-rendering"
-                                                className="block px-4 py-2 text-sm text-black hover:bg-blue-600 hover:text-white"
+                                                className="block px-4 py-2 text-base text-black hover:bg-blue-600 hover:text-white"
                                             >
                                                 Pre-Rendering
                                             </Link>
                                             <Link
                                                 href="/posts/ssg-ssr"
-                                                className="block px-4 py-2 text-sm text-black hover:bg-blue-600 hover:text-white"
+                                                className="block px-4 py-2 text-base text-black hover:bg-blue-600 hover:text-white"
                                             >
                                                 SSG-SSR
                                             </Link>
@@ -159,21 +156,6 @@ function Navbar() {
                                         </div>
                                         </Transition>
                                     </div>
-                                    <Link
-                                        href="/privacy-policy"
-										activeClass="Privacy"
-										smooth={true}
-										offset={50}
-										duration={500}
-										className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                                        role="menuitem"
-                                        tabIndex="0"
-                                        aria-label="Privacy Policy section"
-                                        aria-current={activeClass === "Privacy" ? "page" : undefined}
-                                        onSetActive={() => setActiveClass("Privacy")}
-                                    >
-										Privacy Policy
-									</Link>
 								</div>
 							</div>
 						</div>
