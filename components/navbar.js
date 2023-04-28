@@ -14,7 +14,7 @@ function Navbar() {
 					<div className="flex items-center h-20 w-full">
 						<div className="flex items-center  mx-20  justify-between w-full">
 							<div className="flex justify-center items-center flex-shrink-0 ">
-								<h1 className=" font-bold text-xl cursor-pointer">
+								<h1 className=" font-bold text-2xl cursor-pointer">
 									<Link href="/">MyWeb<span className="text-blue-500">Class</span></Link>
 								</h1>
 							</div>
