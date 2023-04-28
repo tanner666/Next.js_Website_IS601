@@ -7,16 +7,18 @@ import utilStyles from '../../styles/utils.module.css'
 export default function Post({ postData }) {
   return (
     <Layout>
+      <div className="flex justify-center">
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <article>
+      <article className={utilStyles.md}>
         <h1 className={utilStyles.headingXl}>{postData.title}</h1>
         <div className={utilStyles.lightText}>
           <Date dateString={postData.date} />
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
+      </div>
     </Layout>
   )
 }

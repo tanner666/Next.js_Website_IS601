@@ -1,4 +1,9 @@
-.heading2Xl {
+/*styles for .md files*/
+.md{
+  color: white;
+  max-width: 32rem;
+}
+.md .heading2Xl {
   font-size: 2.5rem;
   line-height: 1.2;
   font-weight: 800;
@@ -6,7 +11,7 @@
   margin: 1rem 0;
 }
 
-.headingXl {
+.md .headingXl {
   font-size: 2rem;
   line-height: 1.3;
   font-weight: 800;
@@ -14,13 +19,13 @@
   margin: 1rem 0;
 }
 
-.headingLg {
+.md .headingLg {
   font-size: 1.5rem;
   line-height: 1.4;
   margin: 1rem 0;
 }
 
-.headingMd {
+.md .headingMd {
   font-size: 1.2rem;
   line-height: 1.5;
 }
@@ -48,5 +53,5 @@
 }
 
 .lightText {
-  color: #666;
+  color: #7e8083;
 }

@@ -1,0 +1,27 @@
+.button{
+    cursor: pointer;
+    background-image: white;
+    color: #000;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+  }
+  
+.button:hover {
+    background-image: linear-gradient(to right, #1E40AF, #3B82F6);
+    color: #fff;
+  }
+
+.submenu {
+    display: block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: #000;
+    border-radius: 0.375rem;
+  }
+  
+.submenu:hover {
+    background-image: linear-gradient(to right, #1E40AF, #3B82F6);
+    color: #fff;
+  }

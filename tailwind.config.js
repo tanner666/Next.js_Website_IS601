@@ -1,37 +1,27 @@
 //npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
-const { mauve, violet, red, blackA } = require('@radix-ui/colors');
-
-/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./components/pop-up.jsx', './components/navbar.js'],
-  media: false,
-  theme: {
-    extend: {
-      colors: {
-        ...mauve,
-        ...violet,
-        ...red,
-        ...blackA,
-      },
-      keyframes: {
-        overlayShow: {
-          from: { opacity: 0 },
-          to: { opacity: 1 },
+    purge: ["./components/**/*.js", "./pages/**/*.js"],
+    darkMode: false, // or 'media' or 'class'
+    theme: {
+      extend: {
+        colors: {
+          gray: {
+            100: "#FBFBFB",
+            200: "#c2c7ca",
+            300: "#b8bcbf",
+            400: "#999999",
+            500: "#7F7F7F",
+            600: "#666666",
+            700: "#4C4C4C",
+            800: "#121212",
+            900: "#191919",
+          },
         },
-        contentShow: {
-          from: { opacity: 0, transform: 'translate(-50%, -48%) scale(0.96)' },
-          to: { opacity: 1, transform: 'translate(-50%, -50%) scale(1)' },
-        },
-      },
-      animation: {
-        overlayShow: 'overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1)',
-        contentShow: 'contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1)',
       },
     },
-  },
-  variants: {
-    extend: {},
-  },
-  plugins: [],
-};
-
+    variants: {
+      extend: {},
+    },
+    plugins: [],
+  };
+  
