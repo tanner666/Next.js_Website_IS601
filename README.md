@@ -1,3 +1,6 @@
+# Our Site: 
+https://njit-wis.github.io/project-2-team-web/
+
 # Project 2
 Please READ everything I am giving you and everyone needs to submit in Canvas.
 ## Install Instructions
