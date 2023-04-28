@@ -12,7 +12,7 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <section className="text-gray-600 body-font">
-        <div className="max-w-5xl pt-10 pb-24 mx-auto text-center">
+        <div className="max-w-6xl pt-4 pb-24 mx-auto text-center">
           <h1 className="text-80 font-4 lh-6 ld-04 font-bold text-white mb-6">
             Welcome to MyWebClass
           </h1>
