@@ -65,13 +65,13 @@ function Navbar() {
                                             <div className="py-1">
                                             <Link
                                                 href="/about/our-mission"
-                                                className="block px-4 py-2 text-lg text-black hover:bg-blue-600 hover:text-white"
+                                                className="block px-4 py-2 text-base text-black hover:bg-blue-600 hover:text-white"
                                             >
                                                 Our Mission
                                             </Link>
                                             <Link
                                                 href="/about/our-team"
-                                                className="block px-4 py-2 text-lg text-black hover:bg-blue-600 hover:text-white"
+                                                className="block px-4 py-2 text-base text-black hover:bg-blue-600 hover:text-white"
                                             >
                                                 Our Team
                                             </Link>
@@ -142,13 +142,13 @@ function Navbar() {
                                             <div className="py-1">
                                             <Link
                                                 href="/posts/pre-rendering"
-                                                className="block px-4 py-2 text-sm text-black hover:bg-blue-600 hover:text-white"
+                                                className="block px-4 py-2 text-base text-black hover:bg-blue-600 hover:text-white"
                                             >
                                                 Pre-Rendering
                                             </Link>
                                             <Link
                                                 href="/posts/ssg-ssr"
-                                                className="block px-4 py-2 text-sm text-black hover:bg-blue-600 hover:text-white"
+                                                className="block px-4 py-2 text-base text-black hover:bg-blue-600 hover:text-white"
                                             >
                                                 SSG-SSR
                                             </Link>
