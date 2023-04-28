@@ -4,7 +4,7 @@ export default function Main() {
         <section class="relative pb-24">
           <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
             <div class="py-24 md:py-36">
-              <h1 class="mb-5 text-6xl font-bold text-white">
+              <h1 class="mb-5 text-5xl font-bold text-white">
                 Subscribe to our newsletter
               </h1>
               <h1 class="mb-9 text-2xl font-semibold text-gray-200">

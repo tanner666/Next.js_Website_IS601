@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Script from 'next/script'
-
+import styles from './layout.module.css'
 import Navbar from '../components/navbar'
 import { useState } from 'react';
 //import Header from "../components/Header";
@@ -37,7 +37,7 @@ export default function Layout({ children, home }) {
             console.log(`script loaded correctly, window.FB has been populated`)
           }
         />
-        <main>{children}</main>
+        <main className={styles.container}>{children}</main>
       <Main/>
       <Footer></Footer>
     </>
