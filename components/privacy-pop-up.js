@@ -22,9 +22,9 @@ const PrivacyPolicyPopup = () => {
     <>
       {showPopup && (
         <div className="popup">
-          <Link href="/privacy-policy"><h2>Privacy Policy</h2></Link>
+          <h2>Privacy Policy</h2>
           <p>
-            We use cookies to enhance your experience. By continuing to visit this site, you agree to our use of cookies.            
+            We use cookies to enhance your experience. By continuing to visit this site, you agree to our use of cookies, as stated in our <Link href="/privacy-policy" className="text-blue-600 underline">Privacy Policy</Link>.           
           </p>
           <button onClick={handleAccept}>Accept</button>
           <style jsx>{`
@@ -40,9 +40,9 @@ const PrivacyPolicyPopup = () => {
             }
 
             button {
-              margin-top: 10px;
+              margin-top: 30px;
               padding: 10px 20px;
-              background-color: blue;
+              background-color: #2563EB;
               color: white;
               border: none;
               cursor: pointer;
