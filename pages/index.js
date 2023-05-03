@@ -20,11 +20,6 @@ export default function Home({ allPostsData }) {
             <br />
             Designed to provide teachers with the resources they need to effectively teach web technologies.
           </h2>
-          <Link href="/about" className="inline-flex items-center py-3 px-14 font-semibold tracking-tighter text-white transition duration-500 ease-in-out transform bg-gradient-to-r from-blue-500 to-blue-800 text-md md:mt-0 focus:shadow-outline">
-            <div className="flex text-lg justify-center">
-              Learn More
-            </div>
-          </Link>
         </div>
         <div className="container flex flex-col items-center justify-center mx-auto">
           <img
