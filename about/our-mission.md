@@ -3,9 +3,4 @@ title: 'Our Mission'
 date: '2022-01-01'
 ---
 
-Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
-
-- **Static Generation** is the pre-rendering method that generates the HTML at **build time**. The pre-rendered HTML is then _reused_ on each request.
-- **Server-side Rendering** is the pre-rendering method that generates the HTML on **each request**.
-
-Importantly, Next.js lets you **choose** which pre-rendering form to use for each page. You can create a "hybrid" Next.js app by using Static Generation for most pages and using Server-side Rendering for others.
+Our mission is to provide teachers with the tools and resources they need to effectively teach web development to their students. We believe that web development is an essential skill for the digital age, and we want to empower teachers to equip their students with the knowledge and skills necessary to succeed in today's technology-driven world. Our website offers a comprehensive curriculum, lesson plans, interactive tools, and a supportive community to help teachers create engaging and effective web development courses. We are committed to making web development education accessible and inclusive, and to promoting lifelong learning and professional development among teachers and students alike.
