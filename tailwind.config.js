@@ -1,6 +1,7 @@
 //npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
 module.exports = {
-    purge: ["./components/**/*.js", "./pages/**/*.js"],
+    purge: ["./components/**/*.js", "./pages/**/*.js","./pages/**/*.js",
+    "./components/**/*.js"],
     darkMode: false, // or 'media' or 'class'
     theme: {
       extend: {
