@@ -1,10 +1,13 @@
 import Head from 'next/head'
 import Layout, { siteTitle } from '../components/layout'
-import utilStyles from '../styles/utils.module.css'
+import { useEffect, useState } from 'react';
 import { getSortedPostsData } from '../lib/posts'
-import Link from 'next/link'
-import Date from '../components/date'
 export default function Home({ allPostsData }) {
+  const [imageSrc, setImageSrc] = useState('./images/Webclass.png')
+  useEffect(() => {
+    // update the state of the image when the component is mounted
+    setImageSrc("./images/Webclass.png?timestamp=${Date.now()}")
+  }, []);
   return (
     <Layout>
       <Head>
@@ -22,11 +25,11 @@ export default function Home({ allPostsData }) {
           </h2>
         </div>
         <div className="container flex flex-col items-center justify-center mx-auto">
-          <img
-            className="object-cover object-center w-3/4 mb-10 border shadow-md g327"
-            alt="Placeholder Image"
-            src="./images/Webclass.png"
-          />
+            <img
+              className="object-cover object-center w-3/4 mb-10 border shadow-md g327"
+              alt="Placeholder Image"
+              src={imageSrc}
+            />
         </div>
       </section>
     </Layout>
