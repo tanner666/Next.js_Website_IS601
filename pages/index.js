@@ -4,7 +4,6 @@ import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
 import Date from '../components/date'
-
 export default function Home({ allPostsData }) {
   return (
     <Layout>
@@ -17,15 +16,10 @@ export default function Home({ allPostsData }) {
             Welcome to MyWebClass
           </h1>
           <h2 className="text-2xl font-semibold lh-6 ld-04 pb-11 subtext">
-            nine4 is a free to use template website for websites made
+          An online platform for teachers to learn and teach web development! 
             <br />
-            with Next.js and styled with Tailwind CSS
+            Designed to provide teachers with the resources they need to effectively teach web technologies.
           </h2>
-          <Link href="/about" className="inline-flex items-center py-3 px-14 font-semibold tracking-tighter text-white transition duration-500 ease-in-out transform bg-gradient-to-r from-blue-500 to-blue-800 text-md md:mt-0 focus:shadow-outline">
-            <div className="flex text-lg justify-center">
-              Learn More
-            </div>
-          </Link>
         </div>
         <div className="container flex flex-col items-center justify-center mx-auto">
           <img
@@ -35,11 +29,9 @@ export default function Home({ allPostsData }) {
           />
         </div>
       </section>
-
     </Layout>
   )
 }
-
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
   return {
