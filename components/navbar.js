@@ -19,7 +19,7 @@ function Navbar() {
 								<h1 className=" font-bold text-2xl cursor-pointer">
                                     <Link href="/" className="flex items-center font-bold text-2xl cursor-pointer">
                                         <Image
-                                            src="/images/lightbulb.png"
+                                            src="/./images/lightbulb.png"
                                             alt="Blue lightbulb"
                                             width={20}
                                             height={20}
