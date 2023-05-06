@@ -12,8 +12,10 @@ export default function Post({ postData }) {
         <title>{postData.title}</title>
       </Head>
       <article className={utilStyles.md}>
+        <div className={utilStyles.about}>
         <h1 className={utilStyles.heading2Xl}>{postData.title}</h1>
-        <div className={utilStyles.about} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        </div>
       </article>
       </div>
     </Layout>
