@@ -3,6 +3,8 @@ import { Transition } from "@headlessui/react";
 import Link from 'next/link';
 import 'tailwindcss/tailwind.css'; 
 import styles from './navbar.module.css';
+import Image from 'next/image';
+
 
 function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +17,16 @@ function Navbar() {
 						<div className="flex items-center  mx-20  justify-between w-full">
 							<div className="flex justify-center items-center flex-shrink-0 ">
 								<h1 className=" font-bold text-2xl cursor-pointer">
-									<Link href="/">MyWeb<span className="text-blue-600">Class</span></Link>
+                                    <Link href="/" className="flex items-center font-bold text-2xl cursor-pointer">
+                                        <Image
+                                            src="/images/lightbulb.png"
+                                            alt="Blue lightbulb"
+                                            width={20}
+                                            height={20}
+                                            className="mr-2"
+                                        />
+                                        MyWeb<span className="text-blue-600">Class</span>
+                                    </Link>
 								</h1>
 							</div>
                             
