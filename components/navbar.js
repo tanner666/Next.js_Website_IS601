@@ -18,11 +18,7 @@ function Navbar() {
 							<div className="flex justify-center items-center flex-shrink-0 ">
 								<h1 className=" font-bold text-2xl cursor-pointer">
                                     <Link href="/" className="flex items-center font-bold text-2xl cursor-pointer">
-					<img
-					    width={20}
-					    alt="Placeholder Image"
-					    src="/images/lightbulb.png"
-                                    	/>
+					
                                         <Image
                                             src="/./images/lightbulb.png"
                                             alt="Blue lightbulb"
