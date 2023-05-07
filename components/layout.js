@@ -5,6 +5,7 @@ import Navbar from '../components/navbar'
 import { useState } from 'react';
 //import Header from "../components/Header";
 import Main from "../components/Main";
+import Mail from "../components/Mail";
 import Footer from "../components/Footer";
 import 'tailwindcss/tailwind.css'; 
 const name = '[Your Name]'
@@ -39,7 +40,8 @@ export default function Layout({ children, home }) {
           }
         />
         <main className={styles.container}>{children}</main>
-      <Main/>
+      {/* <Main/> */}
+      <Mail/>
       <Footer></Footer>
     </>
   )
