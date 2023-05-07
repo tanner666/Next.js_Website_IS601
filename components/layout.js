@@ -8,7 +8,7 @@ import Main from "../components/Main";
 import Footer from "../components/Footer";
 import 'tailwindcss/tailwind.css'; 
 const name = '[Your Name]'
-export const siteTitle = 'MyWebClass.org'
+export const siteTitle = 'MyWebClass.org: Agile & Lean Education for the AI-Driven World'
 
 export default function Layout({ children, home }) {
   return (
