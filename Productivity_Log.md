@@ -1,3 +1,3 @@
 | Issue Title | Story Points | Issue Link | Status | Assigned To | Assigned On | Completed On | Status Notes |
 |-------------|--------------|------------|--------|-------------|-------------|--------------|--------------|
-|Or just do user story name if no issue|--------------|leave blank if no attached issue|--------|-------------|-------------|optional|
+|Or just do user story name if no issue|--------------|leave blank if no attached issue|--------|-------------|-------------|------------|optional|
