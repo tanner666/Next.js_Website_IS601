@@ -5,8 +5,8 @@
     "build": "next build",
     "start": "next start",
     "test": "npx playwright test",
-    "export":"next report",
-    "deploy":"gh-pages -d out"
+    "export": "next report",
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.14",
@@ -23,11 +23,15 @@
     "fs": "0.0.1-security",
     "glob": "^9.3.2",
     "gray-matter": "^4.0.3",
+    "i18next": "^22.4.15",
+    "i18next-browser-languagedetector": "^7.0.1",
+    "i18next-http-backend": "^2.2.0",
     "js-cookie": "^3.0.5",
     "next": "^13.4.1",
     "next-translate": "^2.0.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-i18next": "^12.2.2",
     "react-scroll": "^1.8.9",
     "remark": "^14.0.2",
     "remark-html": "^15.0.1"
