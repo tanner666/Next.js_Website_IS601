@@ -6,11 +6,7 @@
       },
       {
         "path": "/about",
-        "title": "MyWebClass.org | About"
-      },
-      {
-        "path": "/posts",
-        "title": "MyWebClass.org | Posts"
+        "title": "MyWebClass.org"
       }
     ]
 }
