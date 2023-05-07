@@ -18,18 +18,13 @@ function Navbar() {
 							<div className="flex justify-center items-center flex-shrink-0 ">
 								<h1 className=" font-bold text-2xl cursor-pointer">
                                     <Link href="/" className="flex items-center font-bold text-2xl cursor-pointer">
-					<img
-					    width={20}
-					    alt="Placeholder Image"
-					    src="./images/lightbulb.png"
-                                    	/>
-                                        <Image
-                                            src="/./images/lightbulb.png"
-                                            alt="Blue lightbulb"
-                                            width={20}
-                                            height={20}
-                                            className="mr-2"
-                                        />
+                                    <img
+                                        className="mr-2"
+                                        width={20}
+                                        alt="Placeholder Image"
+                                        src="./images/lightbulb.png"
+                                                        />
+                                
                                         MyWeb<span className="text-blue-600">Class</span>
                                     </Link>
 								</h1>
