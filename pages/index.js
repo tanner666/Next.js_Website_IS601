@@ -3,7 +3,6 @@ import Link from 'next/link'
 import Layout, { siteTitle } from '../components/layout'
 import { useEffect, useState } from 'react';
 import { getSortedPostsData } from '../lib/posts'
-import Link from 'next/link'
 import Date from '../components/date'
 import {useRouter} from 'next/router';
 
