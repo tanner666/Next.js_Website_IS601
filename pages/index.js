@@ -13,7 +13,7 @@ export default function Home({ allPostsData }) {
   return (
     <Layout>
       <Head>
-        <title>{siteTitle}</title>
+        <title>MyWebClass.org: Agile & Lean Education for the AI-Driven World</title>
       </Head>
       <section className="body-font">
         <div className="max-w-6xl pt-12 pb-24 mx-auto text-center">
