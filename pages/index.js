@@ -4,7 +4,13 @@ import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
 import Date from '../components/date'
+import {useRouter} from 'next/router';
+
 export default function Home({ allPostsData }) {
+  const router = useRouter();
+  const {locale} = router;
+  const t = (key) => router.locale === 'en' ? require('../locales/en.json')[key] : (router.locale === 'fr' ? require('../locales/fr.json')[key] : require('../locales/de.json')[key]);
+
   return (
     <Layout>
       <Head>
@@ -13,12 +19,12 @@ export default function Home({ allPostsData }) {
       <section className="body-font">
         <div className="max-w-6xl pt-12 pb-24 mx-auto text-center">
           <h1 className="text-80 lh-6 ld-04 font-bold title mb-6">
-            Welcome to MyWebClass
+            {t('welcome')}
           </h1>
           <h2 className="text-2xl font-semibold lh-6 ld-04 pb-11 subtext">
-          An online platform for teachers to learn and teach web development! 
+            {t('description1')}
             <br />
-            Designed to provide teachers with the resources they need to effectively teach web technologies.
+            {t('description2')}
           </h2>
         </div>
         <div className="container flex flex-col items-center justify-center mx-auto">
