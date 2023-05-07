@@ -1,14 +1,28 @@
 /*styles for .md files*/
 .md{
   color: white;
-  max-width: 32rem;
+  font-size: 1rem;
 }
+
+.md .blog{
+  max-width: 32rem;
+  
+}
+
+.about{
+  max-width: 50rem;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+
 .md .heading2Xl {
-  font-size: 2.5rem;
+  font-size: 2.7rem;
   line-height: 1.2;
   font-weight: 800;
   letter-spacing: -0.05rem;
   margin: 1rem 0;
+  text-align: center;
 }
 
 .md .headingXl {

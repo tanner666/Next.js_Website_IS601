@@ -1,6 +1,7 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import Layout, { siteTitle } from '../components/layout'
-import utilStyles from '../styles/utils.module.css'
+import { useEffect, useState } from 'react';
 import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
 import Date from '../components/date'
@@ -10,7 +11,6 @@ export default function Home({ allPostsData }) {
   const router = useRouter();
   const {locale} = router;
   const t = (key) => router.locale === 'en' ? require('../locales/en.json')[key] : (router.locale === 'fr' ? require('../locales/fr.json')[key] : require('../locales/de.json')[key]);
-
   return (
     <Layout>
       <Head>
@@ -26,13 +26,18 @@ export default function Home({ allPostsData }) {
             <br />
             {t('description2')}
           </h2>
+          <Link href="/about/our-mission" className="inline-flex items-center py-3 px-14 font-semibold tracking-tighter text-white transition duration-500 ease-in-out transform bg-gradient-to-r from-blue-500 to-blue-800 text-md md:mt-0 focus:shadow-outline">
+            <div className="flex text-lg justify-center">
+              Learn More
+            </div>
+          </Link>
         </div>
         <div className="container flex flex-col items-center justify-center mx-auto">
-          <img
-            className="object-cover object-center w-3/4 mb-10 border shadow-md g327"
-            alt="Placeholder Image"
-            src="./images/Webclass.png"
-          />
+            <img
+              className="object-cover object-center w-3/4 mb-10 border shadow-md g327"
+              alt="Placeholder Image"
+              src="./images/Webclass.png"
+            />
         </div>
       </section>
     </Layout>

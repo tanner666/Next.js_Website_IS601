@@ -8,15 +8,14 @@ export default function Post({ postData }) {
   return (
     <Layout>
       <div className="flex justify-center">
-      <Head>
+      <Head className="text-80 lh-6 ld-04 font-bold title mb-6">
         <title>{postData.title}</title>
       </Head>
       <article className={utilStyles.md}>
-        <h1 className={utilStyles.headingXl}>{postData.title}</h1>
-        <div className={utilStyles.lightText}>
-          <Date dateString={postData.date} />
-        </div>
+        <div className={utilStyles.about}>
+        <h1 className={utilStyles.heading2Xl}>{postData.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        </div>
       </article>
       </div>
     </Layout>

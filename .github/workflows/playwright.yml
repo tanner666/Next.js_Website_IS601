@@ -23,7 +23,7 @@ jobs:
       - name: Install dependencies
         run: |
           apt-get update
-          apt-get install -y libgbm-dev
+          apt-get install -y libgbm-dev chromium-bsu
           npm ci
           npx playwright install chromium
           npm install -g lighthouse chrome-launcher axe-core chromium wait-on
@@ -38,10 +38,6 @@ jobs:
 
       - name: Run Playwright tests
         run: npx playwright test --config=playwright.config.js
-
-      - name: Generate Lighthouse Report
-        run: |
-          lighthouse http://localhost:3000 --output html --output-path ./reports/report.html --chrome-flags="--headless --no-sandbox --disable-gpu"
 
       - name: Upload report, screenshots and videos of failed tests
         uses: actions/upload-artifact@v3
