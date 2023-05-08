@@ -3,14 +3,15 @@ import Link from 'next/link'
 import Layout, { siteTitle } from '../components/layout'
 import { useEffect, useState } from 'react';
 import { getSortedPostsData } from '../lib/posts'
-import Date from '../components/date'
 import {useRouter} from 'next/router';
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 export default function Home({ allPostsData }) {
-  const router = useRouter();
-  const {locale} = router;
-  const t = (key) => router.locale === 'en' ? require('../locales/en.json')[key] : (router.locale === 'fr' ? require('../locales/fr.json')[key] : require('../locales/de.json')[key]);
+  const {t}  = useTranslation();
   return (
+    <>
+    <h1>{t('welcome')}</h1>
     <Layout>
       <Head>
         <title>MyWebClass.org: Agile & Lean Education for the AI-Driven World</title>
@@ -40,6 +41,7 @@ export default function Home({ allPostsData }) {
         </div>
       </section>
     </Layout>
+    </>
   )
 }
 export async function getStaticProps() {
