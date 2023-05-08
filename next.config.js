@@ -1,4 +1,9 @@
 module.exports = {
+  i18n:{
+    locales: ['en', 'fr', 'de'], // Define supported locales
+    defaultLocale: 'en'// Set the default language to English
+  },
+  
   async rewrites() {
     return [
       {
