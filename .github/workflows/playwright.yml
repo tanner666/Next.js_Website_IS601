@@ -29,10 +29,10 @@ jobs:
           fi
           apt-get update
           apt-get install -y libgbm-dev chromium-bsu
-          npm ci
-          npx playwright install chromium
+          npm ci --force
+          npx playwright install chromium --force
           npm install -g lighthouse chrome-launcher axe-core chromium wait-on
-          npx playwright install-deps  
+          npx playwright install-deps --force
           npm run build --turbo
 
       - name: Start the application
