@@ -22,6 +22,11 @@ jobs:
 
       - name: Install dependencies
         run: |
+          if [ "${{ steps.detect-package-manager.outputs.manager }}" == "yarn" ]; then
+            yarn install --force
+          else
+            npm ci --force
+          fi
           apt-get update
           apt-get install -y libgbm-dev chromium-bsu
           npm ci
