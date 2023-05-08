@@ -5,8 +5,11 @@ import '../i18n';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { getTranslationData } from '../i18n';
+import Router from 'next/router';
+import withGA from 'next-ga';
+import { pageview } from '../lib/google-analytics';
 
-export default function App({ Component, pageProps }) {
+function App({ Component, pageProps }) {
   const [translationData, setTranslationData] = useState({});
   const router = useRouter();
 
@@ -24,3 +27,5 @@ export default function App({ Component, pageProps }) {
     </>
   );
 }
+
+export default withGA('G-TBPFJR2B7M', Router)(App);
