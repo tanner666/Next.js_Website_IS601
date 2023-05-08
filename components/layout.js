@@ -19,7 +19,7 @@ export default function Layout({ children, home }) {
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-TBPFJR2B7M"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
+          function gtag(){dataLayer.push(arguments)}
           gtag('js', new Date());
 
           gtag('config', 'G-TBPFJR2B7M');
