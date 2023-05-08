@@ -28,4 +28,4 @@
 |25.Favicon in github page|1|https://github.com/NJIT-WIS/project-2-team-web/issues/23|Completed|Srikavya|May 1|May 2|-------------|-------------|
 |26.Footer Changes|2|------------|Completed|Srikavya|May 1|May 2|--------------|--------------|
 |-------------|--------------|------------|--------|-------------|-------------|--------------|--------------|--------------|
-|Internationalization & accessibility & bug fixes|10|(https://github.com/NJIT-WIS/project-2-team-web/issues/44)|Completed||-------------|--------------|--------------|--------------|
+|Internationalization & accessibility & bug fixes|10|https://github.com/NJIT-WIS/project-2-team-web/issues/44|Completed||Akshay|May 07|Fixed the bug which caused the default homepage to be in german--------------|
