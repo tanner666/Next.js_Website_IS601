@@ -30,9 +30,9 @@ jobs:
           apt-get update
           apt-get install -y libgbm-dev chromium-bsu
           npm ci --force
-          npx playwright install chromium --force
+          npx playwright install chromium
           npm install -g lighthouse chrome-launcher axe-core chromium wait-on
-          npx playwright install-deps --force
+          npx playwright install-deps
           npm run build --turbo
 
       - name: Start the application
