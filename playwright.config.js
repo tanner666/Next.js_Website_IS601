@@ -18,6 +18,9 @@ module.exports = defineConfig({
     trace: 'on-first-retry',
     video: 'on',
     timeout: 30000, // Global timeout for tests (in milliseconds)
+    // Ignore TLS certificate errors globally
+    bypassCSP: true,
+    ignoreHTTPSErrors: true
   },
 
   // Define the projects to run, each with its own settings
