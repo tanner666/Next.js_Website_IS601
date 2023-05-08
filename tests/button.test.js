@@ -12,7 +12,7 @@ test.describe('Homepage', () => {
   });
 
   test('checks if the content is displayed', async () => {
-    await page.goto('http://localhost:3000');
+    await page.goto('https://njit-wis.github.io/project-2-team-web/');
 
     // Check if the Learn More button is displayed
     const learnMoreButton = await page.$('a.inline-flex');
