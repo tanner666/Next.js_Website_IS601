@@ -1,6 +1,26 @@
 # Our Site: 
 https://njit-wis.github.io/project-2-team-web/
 
+# Overview:
+This project was developed as part of my IS601 course and involved creating a robust Next.js web application to fulfill the specified requirements for a fictional educational software company. Our development process adhered to Agile and Lean methodologies, ensuring flexibility and efficiency throughout the project lifecycle.
+
+# Key Features:
+
+Internationalization (i18n) and GDPR Compliance: We meticulously ensured that our web app was compliant with internationalization standards and GDPR regulations, guaranteeing a seamless user experience for a global audience while prioritizing data protection.
+
+Search Engine Optimization (SEO): To enhance visibility and discoverability, our web app was optimized for search engines, ensuring it ranks well in search results.
+
+Google Analytics Tracking: We implemented Google Analytics tracking to gather valuable insights into user behavior, enabling data-driven decision-making and continuous improvement.
+
+Playwright Testing: We conducted testing using Playwright to identify and rectify any potential issues, ensuring a reliable and error-free user experience.
+
+Sales Funnel Integration: The website was meticulously designed around a targeted sales funnel, guiding users seamlessly from initial engagement to conversion, thereby optimizing the user journey.
+
+Deployment via GitHub Pages: Our web app was deployed using GitHub Pages, providing a simple and efficient way to showcase our work to a broader audience.
+
+GitHub Actions for Automated Workflows: We leveraged GitHub Actions to automate various workflows, streamlining tasks such as testing, deployment, and continuous integration, making the development process more efficient and error-resistant.
+
+-----------------------------------------------------------------------------------------------
 # Project 2
 Please READ everything I am giving you and everyone needs to submit in Canvas.
 ## Install Instructions
